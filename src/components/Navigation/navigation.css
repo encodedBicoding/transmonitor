@@ -1,0 +1,88 @@
+.top-nav{
+  color: #647787;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.top-nav-container{
+  background-color: #fff;
+  width: 100%;
+  height: 60px;
+  box-shadow: 0 1px 100px 1px rgba(0,0,0,.1);
+  position: absolute;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+.top-nav-item{
+  margin: 0;
+  padding: 0;
+}
+.nav-title h3{
+  color:  #1875F0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 24px;
+  text-align: right;
+
+}
+.nav-search{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.nav-search input {
+  width: 80%;
+  border: none;
+  padding: 5px;
+  outline: none;
+}
+.nav-support a,
+.nav-faq a{
+  cursor: pointer;
+  color: #acadac;
+  text-decoration: none;
+}
+.notification-data{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #1860EC;
+  color: #fff;
+  font-size: 9px;
+  right: 15.53%;
+  top: 22%
+}
+.flex-rw{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#user-welcome{
+  line-height: .3;
+  position: relative;
+  top: -3px
+}
+#user-welcome #greetings{
+  text-align: right;
+  font-size: 10px;
+}
+#user-welcome #user{
+  text-align: right;
+  display: inline;
+}
+#user-profile-image img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.nav-user div{
+  margin-right: 5px;
+}
