@@ -1,10 +1,10 @@
 import React from 'react';
-import TopNav from './components/Navigation/TopNav';
+import HomePage from './Presentationals/Homepage';
 
 function App() {
   return (
     <div className="App">
-      <TopNav />
+      <HomePage />
     </div>
   );
 }

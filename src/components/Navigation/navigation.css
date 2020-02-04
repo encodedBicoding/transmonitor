@@ -11,7 +11,7 @@
   position: absolute;
   top: 0;
   padding: 0;
-  margin: 0;
+  margin: 0 0 3px 0;
 }
 .top-nav-item{
   margin: 0;
@@ -32,11 +32,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  align-self: right;
 }
 .nav-search input {
-  width: 80%;
+  width: 57%;
   border: none;
-  padding: 5px;
+  padding: 6px;
   outline: none;
 }
 .nav-support a,
@@ -50,9 +51,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 52%;
   background-color: #1860EC;
   color: #fff;
   font-size: 9px;
@@ -85,4 +86,92 @@
 }
 .nav-user div{
   margin-right: 5px;
+}
+
+/* 
+  *
+  * Side Nav Style 
+  *
+*/
+
+.side-nav-container {
+  background-color:  #fff;
+  position: fixed;
+  top: 6%;
+  width: 24%;
+  height: 100%;
+  z-index: -1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.side-nav-list{
+  margin: 0;
+  padding: 0;
+}
+.gen-inv{
+  display: flex;
+  margin: 15% 0 0 40px;
+  position: relative;
+  width: 100%;
+}
+#invoice{
+  text-align: center;
+  width: 65%;
+  background-color: #27AE60;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#invoice p{
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+}
+.side-nav-contents{
+  margin: 30px 0 0 0;
+}
+.side-nav-headings{
+  font-size: 11px;
+  line-height: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #647787;
+}
+.side-nav-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color:  #647787;
+  height: 35px;
+  margin: 4px 0 0 50px;
+  cursor: pointer;
+}
+
+
+.side-nav-item p{
+  margin: 0 0 0 15px;
+  font-size: 11px;
+  line-height: 15px;
+}
+.side-nav-item-content{
+  transition: all .9s;
+}
+.side-nav-item-container:hover > .side-nav-item-content{
+  background-color: #1875F0;
+  opacity: .4;
+}
+.side-nav-item-container:hover  .side-nav-item {
+  color: #000;
+}
+
+.side-nav-item-container:hover > .stroke{
+  opacity: 1;
+}
+.stroke {
+  transition: all .9s;
+  position: absolute;
+  left: 1px;
+  height: 42.2px;
+  padding: .2px;
+  width: 4px;
+  background-color: #1875F0;
+  opacity: 0;
 }
