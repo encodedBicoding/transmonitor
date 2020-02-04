@@ -1,0 +1,23 @@
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.pet-metric-container{
+  background-color: #fff;
+  height: auto;
+  margin-right: 9px;
+  width: 50%;
+}
+.metrics-data #title{
+  font-size:9px;
+}
+.metrics-data #amount{
+  font-size: 18px;
+}
+.metrics-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
