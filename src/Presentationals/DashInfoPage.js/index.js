@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import createPetiteMetric from '../../components/Metrics/PetiteMetric';
-import { petiteData } from '../../Models/data';
+import createMonthlyMetrics from '../../components/Metrics/MonthlyMetrics';
+import { petiteData, monthlyData } from '../../Models/data';
+import Order from '../../components/Order';
+
 import './dashinfo.css';
 
 class DashInfo extends Component{
@@ -8,7 +11,11 @@ class DashInfo extends Component{
     dailyTransacTionVolume: '2,345',
     dailyTransactionValue: 'N4,000,000',
     totalTransacTionVolume: '452,000',
-    totalTransactionValue: 'N4,000,000'
+    totalTransactionValue: 'N4,000,000',
+    reconcilledOrder: 80,
+    pendingOrder: 20,
+    reconcilledPayments: 80,
+    pendingPayments: 20,
   }
   render() {
     return (
@@ -32,11 +39,43 @@ class DashInfo extends Component{
          </div>
        </div>
        <div className='dash-content'>
-         <div>
-            ok
+         <div className='met-nav-container'>
+           <div className='metrics-navigation'>
+             <div id='date'>
+                <span>Today: </span>
+                <span>5, August 2018</span>
+             </div>
+             <div id='search'>
+                <select id='select-container'>
+                  <option>1 Jan - 1 Jun</option>
+                </select>
+             </div>
+             <div id='navigate'>
+                <input type='button' value='<' id='left'/>
+                <input type='button' value='>' id='right'/>
+             </div>
+           </div>
+           <div className='month-metrics-display'>
+            {
+              monthlyData.map((data) => createMonthlyMetrics(data.month, data.data)) 
+            }
+           </div>
          </div> 
-         <div>
-            bye
+         <div className='order-place'>
+           <div>
+           <Order 
+              title='Orders' 
+              reconcilled={this.state.reconcilledOrder} 
+              pending={this.state.pendingOrder}
+              order={true}
+              />
+              <Order 
+              title='Payments' 
+              reconcilled={this.state.reconcilledPayments} 
+              pending={this.state.pendingPayments}
+              order={false}
+              />
+           </div>
          </div>
        </div>
       </div>

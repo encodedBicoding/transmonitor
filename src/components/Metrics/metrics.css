@@ -21,3 +21,18 @@
   justify-content: space-between;
   padding: 10px;
 }
+.monthly-map-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fff;
+  border-right: .2px solid rgb(173, 204, 226);
+  width: 16%;
+  height: auto
+}
+.monthly-map-container #month{
+  font-size: 14px;
+  position: relative;
+  margin-top: 0;
+
+}
