@@ -4,7 +4,7 @@ class SideNav extends Component {
   render() {
     return (
       <nav className='side-nav-container side-nav '>
-        <div class='side-nav-list gen-inv'>
+        <div className='side-nav-list gen-inv'>
           <div id="invoice">
             <p>GENERATE INVOICE</p>
           </div>

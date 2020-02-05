@@ -5,12 +5,14 @@
   height: 100%;
 }
 .dash-content{
-  width: 93%;
-  margin: 0 0 27px 3.4%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  align-items: center;
+}
+.dash-section{
+  width: 93%;
+  margin: 0 0 27px 3.4%;
 }
 .petite-info{
   display: flex;
@@ -27,6 +29,8 @@
   background-color: #fff;
   width: 65%;
   height: 350px;
+  border: 1px solid #EEF8FD;
+  border-radius: 2px;
 }
 .metrics-navigation{
   display: flex;
@@ -67,5 +71,42 @@
 .order-place{
   width: 33.5%;
   height: 355px;
+  margin-right: 9px;
+  margin-top: 3px;
+}
+.pay-header{
+  color:  #262626;
+  font-size: 36px;
+  line-height: 48px;
+}
+.showing {
+  width: 25%;
+}
+.showing #caret{
+  margin-left: 4px;
+}
+.showing span,
+.show-select span{
+  font-size: 80%;
+}
+.payment-search{
+  border-bottom: 0.5px solid #787878;
+  display: flex;
+  align-items: center;
+  width: 35%;
+}
+.payment-search input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+}
+.show-select span{
   margin-right: 10px;
+}
+.show-select select{
+  margin-right: 9px;
+  border-radius: 0;
+  height: 25px;
+  outline: none;
 }

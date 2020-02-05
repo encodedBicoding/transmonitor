@@ -1,13 +1,13 @@
 import React from 'react';
 import {AreaChart, Area, Tooltip } from 'recharts';
 
-function createMonthlyMetrics(month, data) {
+function MonthlyMetrics({month, data}) {
   return (
       <div className='monthly-map-container'>
           <h6 id='month'>{month}</h6>
           <div className='metrics-map '>
             <AreaChart
-              width={93}
+              width={90}
               height={220}
               data={data}
               margin={{ top: 10, right: 0, left: 0, bottom: 0 }}
@@ -32,4 +32,4 @@ function createMonthlyMetrics(month, data) {
   )
 }
 
-export default createMonthlyMetrics;
+export default MonthlyMetrics;

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import createPetiteMetric from '../../components/Metrics/PetiteMetric';
-import createMonthlyMetrics from '../../components/Metrics/MonthlyMetrics';
+import MonthlyMetrics from '../../components/Metrics/MonthlyMetrics';
 import { petiteData, monthlyData } from '../../Models/data';
 import Order from '../../components/Order';
 
@@ -16,11 +18,12 @@ class DashInfo extends Component{
     pendingOrder: 20,
     reconcilledPayments: 80,
     pendingPayments: 20,
+    searchPayment: ''
   }
   render() {
     return (
       <div className='dash-container'>
-       <div className='dash-content'>
+       <div className='dash-content dash-section'>
          <div className='petite-info info-left'>
             {
               createPetiteMetric('Daily Transaction Volume', this.state.dailyTransacTionVolume, petiteData)
@@ -38,7 +41,7 @@ class DashInfo extends Component{
             }
          </div>
        </div>
-       <div className='dash-content'>
+       <div className='dash-content dash-section'>
          <div className='met-nav-container'>
            <div className='metrics-navigation'>
              <div id='date'>
@@ -57,7 +60,7 @@ class DashInfo extends Component{
            </div>
            <div className='month-metrics-display'>
             {
-              monthlyData.map((data) => createMonthlyMetrics(data.month, data.data)) 
+              monthlyData.map((data, idx) => <MonthlyMetrics key={idx} month={data.month} data={data.data}/>) 
             }
            </div>
          </div> 
@@ -78,6 +81,36 @@ class DashInfo extends Component{
            </div>
          </div>
        </div>
+       <section className='dash-section'>
+         <div className='pay-header'>
+            <p>Payments</p>
+         </div>
+         <div className='dash-content'>
+           <div className='dash-content showing'>
+            <span>Showing</span>
+            <span id='blue'>20
+            <span id='caret'>&copy;</span>
+            </span>
+            <span>out of</span>
+            <span>500</span>
+            <span>Payments</span>
+           </div>
+           <div className='payment-search'>
+            <FontAwesomeIcon icon={faSearch} color="#747574" transform="shrink-8" style={{fontWeight: '10px'}}/>
+             <input placeholder='Search payments' value={this.state.searchPayment}/>
+           </div>
+           <div className='show-select'>
+             <span>Show</span>
+             <select>
+               <option>All</option>
+               <option>Reconcilled</option>
+               <option>Un-reconcilled</option>
+               <option>Settled</option>
+               <option>Unsettled</option>
+             </select>
+           </div>
+         </div>
+       </section>
       </div>
     )
   }

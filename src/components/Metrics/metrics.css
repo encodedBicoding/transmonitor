@@ -8,6 +8,9 @@
   height: auto;
   margin-right: 9px;
   width: 50%;
+  border: 1px solid #EEF8FD;
+  box-sizing: border-box;
+  border-radius: 2px;
 }
 .metrics-data #title{
   font-size:9px;
