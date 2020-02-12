@@ -18,7 +18,9 @@ class DashInfo extends Component{
     pendingOrder: 20,
     reconcilledPayments: 80,
     pendingPayments: 20,
-    searchPayment: ''
+    searchPayment: '',
+    totalPaymentLength: 500,
+    currentPaymentLength: 20
   }
   render() {
     return (
@@ -88,11 +90,11 @@ class DashInfo extends Component{
          <div className='dash-content'>
            <div className='dash-content showing'>
             <span>Showing</span>
-            <span id='blue'>20
+            <span id='blue'>{this.state.currentPaymentLength}
             <span id='caret'>&copy;</span>
             </span>
             <span>out of</span>
-            <span>500</span>
+            <span>{this.state.totalPaymentLength}</span>
             <span>Payments</span>
            </div>
            <div className='payment-search'>

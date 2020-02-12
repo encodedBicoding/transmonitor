@@ -1,0 +1,11 @@
+#table_text{
+  font-size: 14px;
+  color: #414042;
+}
+#table_text:nth-child(0) {
+  margin-right: 14%;
+}
+.table-item-container{
+  background-color: #fff;
+  padding: 7px;
+}

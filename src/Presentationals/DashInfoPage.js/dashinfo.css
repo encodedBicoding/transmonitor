@@ -100,6 +100,7 @@
   background-color: transparent;
   width: 100%;
   outline: none;
+  padding: 4px;
 }
 .show-select span{
   margin-right: 10px;
