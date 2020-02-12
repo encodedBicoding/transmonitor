@@ -1,0 +1,41 @@
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.pet-metric-container{
+  background-color: #fff;
+  height: auto;
+  margin-right: 9px;
+  width: 50%;
+  border: 1px solid #EEF8FD;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+.metrics-data #title{
+  font-size:9px;
+}
+.metrics-data #amount{
+  font-size: 18px;
+}
+.metrics-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+.monthly-map-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fff;
+  border-right: .2px solid rgb(173, 204, 226);
+  width: 16%;
+  height: auto
+}
+.monthly-map-container #month{
+  font-size: 14px;
+  position: relative;
+  margin-top: 0;
+
+}
